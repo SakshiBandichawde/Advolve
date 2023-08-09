@@ -4,6 +4,16 @@
     font-family: "General Sans";
     box-sizing: border-box;
 }
+#preloader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #afacac
+    url('Uond-unscreen.gif') no-repeat center;
+    z-index: 99999;
+}
+
+
 html,body{
     width: 100%;
     
@@ -144,6 +154,7 @@ html,body{
     height: 100%;
     opacity: 0;
     pointer-events: none;
+    cursor: pointer;
     transform: translate(-50%,-50%);
     z-index:999;
     position: absolute;

@@ -8,7 +8,7 @@ function firstPageAnim(){
     tl.from("#nav",{
         y:'-10',
         opacity:0,
-        duration:1.5,
+        duration:4.2,
         ease:Expo.easeInOut
     })
     .to(".boundingelem",{
@@ -88,3 +88,22 @@ document.querySelectorAll(".elem").forEach(function(elem){
 
     });
 });
+
+
+
+let loaded = false
+let enoughTimePassed = false
+
+window.addEventListener("load", function() {
+  if (enoughTimePassed) { hidePreloader() }
+  loaded = true
+})
+
+setTimeout(() => {
+  if (loaded) { hidePreloader() }
+  enoughTimePassed = true
+}, 3400)
+
+function hidePreloader() {
+   document.getElementById("preloader").remove()
+}
